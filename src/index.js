@@ -51,13 +51,13 @@ class Root extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateFromProps = state => ({
   isLoading: state.user.isLoading
 });
 
 const RootWithAuth = withRouter(
   connect(
-    mapStateToProps,
+    mapStateFromProps,
     { setUser, clearUser }
   )(Root)
 );
